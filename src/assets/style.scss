@@ -132,11 +132,14 @@ input, button {
    &.full {
       display: block;
       max-width: 100%;
+      height: auto;
 
-      img {
+      .video-js {
          display: inline-block;
-         width: 50%;
+         height: 28rem;
+         width: 49.5rem;
          vertical-align: top;
+         border: none;
       }
 
       .bibli {
@@ -205,9 +208,68 @@ input, button {
 
             margin: .15rem;
 
+            transition: ease-in-out 300ms;
+
             &:hover {
                color: #eaeaea;
                background: #16856a;
+            }
+         }
+      }
+
+      .channel {
+         display: table;
+         height: auto;
+
+         padding: .5rem;
+         margin: .8rem 0;
+
+         background: rgba(0,0,0,.15);
+
+         border-radius: 3px;
+         color: white;
+
+         img {
+            height: 2rem;
+            width: 2rem;
+
+            border-radius: 5px;
+
+            vertical-align: top;
+         }
+
+         .author {
+            display: inline-block;
+            margin: 0 .75rem;
+
+            .name {
+               cursor: pointer;
+
+               &:hover {
+                  color: #d7d7d7;
+               }
+            }
+
+            .people {
+               display: block;
+               font-size: .85rem;
+            }
+
+            .add {
+               border-radius: 2px;
+               background: #e74c3c;
+               color: white;
+               text-align: center;
+
+               padding: 0 .15rem;
+
+               font-weight: bolder;
+
+               cursor: pointer;
+
+               &:hover {
+                  background: #c74535;
+               }
             }
          }
       }

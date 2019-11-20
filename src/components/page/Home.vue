@@ -1,15 +1,28 @@
 <template>
    <div>
       <div class="wrap">
-         <h2>Videos</h2>
-         <Video></Video>
-         <Video></Video>
-         <Video></Video>
-         <Video></Video>
-         <Video></Video>
-         <Video></Video>
-         <h2>Must watch</h2>
-         <VideoFullSize></VideoFullSize>
+         <div>
+            <h2>Videos</h2>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+         </div>
+         <div>
+            <h2>Must watch</h2>
+            <VideoFullSize></VideoFullSize>
+         </div>
+         <div>
+            <h2>Users watch</h2>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+            <Video></Video>
+         </div>
       </div>
    </div>
 </template>

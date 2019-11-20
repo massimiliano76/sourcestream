@@ -1,6 +1,7 @@
 <template>
    <div class="video full">
-      <img src="https://hackernoon.com/drafts/g3143spo.png" alt="" />
+      <video ref="player" class="video-js">
+      </video>
       <div class="bibli">
          <span class="title">There is another title to see the video</span>
          <span class="description">
@@ -17,13 +18,47 @@
             <span class="tag">open</span>
             <span class="tag">source</span>
          </span>
+         <span class="channel">
+            <img src="https://miro.medium.com/max/400/1*Gqw3w9Hec5rlxzVRHlbJrw.jpeg" alt="" />
+            <div class="author">
+               <span class="name">Open Source</span>
+               <span class="group">
+                  <span class="people grp-1">2 000</span>
+                  <span class="add grp-2">+</span>
+               </span>
+            </div>
+         </span>
       </div>
    </div>
 </template>
 
 <script>
+   import videojs from 'video.js';
+
    export default {
       name: 'Video-FullSize',
+
+      data() {
+         return ({
+            player: null,
+            videoOptions: {
+               controls: true,
+               sources: [
+                  {
+                     src:
+                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                     type: "video/mp4"
+                  }
+               ]
+            }
+         });
+      },
+
+      mounted() {
+         this.player = videojs(this.$refs.player, this.videoOptions, () => {
+            console.log("Player ready");
+         });
+      }
    };
 </script>
 
