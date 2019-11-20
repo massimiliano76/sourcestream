@@ -132,11 +132,14 @@ input, button {
    &.full {
       display: block;
       max-width: 100%;
+      height: auto;
 
-      img {
+      .video-js {
          display: inline-block;
-         width: 50%;
+         height: 28rem;
+         width: 49.5rem;
          vertical-align: top;
+         border: none;
       }
 
       .bibli {
@@ -204,6 +207,8 @@ input, button {
             cursor: pointer;
 
             margin: .15rem;
+
+            transition: ease-in-out 300ms;
 
             &:hover {
                color: #eaeaea;

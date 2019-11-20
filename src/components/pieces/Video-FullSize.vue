@@ -1,6 +1,7 @@
 <template>
    <div class="video full">
-      <img src="https://hackernoon.com/drafts/g3143spo.png" alt="" />
+      <video ref="player" class="video-js">
+      </video>
       <div class="bibli">
          <span class="title">There is another title to see the video</span>
          <span class="description">
@@ -22,8 +23,32 @@
 </template>
 
 <script>
+   import videojs from 'video.js';
+
    export default {
       name: 'Video-FullSize',
+
+      data() {
+         return ({
+            player: null,
+            videoOptions: {
+               controls: true,
+               sources: [
+                  {
+                     src:
+                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                     type: "video/mp4"
+                  }
+               ]
+            }
+         });
+      },
+
+      mounted() {
+         this.player = videojs(this.$refs.player, this.videoOptions, () => {
+            console.log("Player ready");
+         });
+      }
    };
 </script>
 
