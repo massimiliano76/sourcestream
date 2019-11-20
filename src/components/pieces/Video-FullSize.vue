@@ -18,6 +18,16 @@
             <span class="tag">open</span>
             <span class="tag">source</span>
          </span>
+         <span class="channel">
+            <img src="https://miro.medium.com/max/400/1*Gqw3w9Hec5rlxzVRHlbJrw.jpeg" alt="" />
+            <div class="author">
+               <span class="name">Open Source</span>
+               <span class="group">
+                  <span class="people grp-1">2 000</span>
+                  <span class="add grp-2">+</span>
+               </span>
+            </div>
+         </span>
       </div>
    </div>
 </template>
